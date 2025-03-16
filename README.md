@@ -7,10 +7,12 @@ Pictures and videos are uploaded to the server into `/var/services/homes/*/photo
 ## Environment setup
 
 Export free mobile user id and password.
+Credentials are stored in `on_boot.sh` script, run at the server boot.
 
 ```shell
-export FREEUSER="freeuser"
-export FREEPWD="pwd"
+echo "# Free Mobile credentials" >> on_boot.sh
+echo export FREEUSER="'freeuser'" >> on_boot.sh
+echo export FREEPWD="'pwd'" >> on_boot.sh
 ````
 
 Build the env and test the installation.
